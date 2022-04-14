@@ -5,6 +5,11 @@ body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
 nav{
     display: flex;
     flex-direction: column;
@@ -12,11 +17,11 @@ nav{
     background-color: #333333;
     color: white;
     padding: 8px;
-    position: fixed;
     width: 250px;
-    overflow-y: scroll;
+    position: fixed;
     top: 0;
     bottom: 0;
+    overflow-y: scroll;
 }
 
 nav h1{
@@ -36,4 +41,46 @@ nav li{
 nav a{
     color: white;
     text-decoration: none;
+}
+
+.content{
+    width: 100%;
+    position: fixed;
+    padding: 8px;
+    top: 0;
+    left: 270px;
+    bottom: 0;
+    overflow-y: scroll;
+    margin: 0 70px;
+}
+
+i{
+    display: none;
+}
+
+@media (max-width: 700px){
+    nav{
+        display: none;
+    }
+
+    .content{
+        position: fixed;
+        left: 0;
+        margin: auto;
+    }
+
+    .content h1{
+        text-align: center;
+    }
+
+    i{
+        font-size: 50px;
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-active{
+        display: fixed;
+
+    }
 }
